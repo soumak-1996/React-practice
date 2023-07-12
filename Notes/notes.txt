@@ -1,0 +1,52 @@
+
+EPISODE 2 Notes:-
+
+package.json is a configuration file for npm
+npm does not stand for node package manager
+npm is used to manage packages but it does not stand for node package manager
+npm init is used to add npm to application. and npm init will create the package.json file.
+
+A bundler helps to clean and minify the code to make it ready for production deployment. 
+npm create react uses webpack as a bundler by default
+
+There are two types of dependencies :
+1. Dev dependency. -- Only used in development environments. -D tells the npm that its a dev dependency
+2. Normal dependency -- Used in all environments including production.
+
+If there is a minor upgrade in any dependency and we use "^" the dependency will automatically be upgraded.
+whereas if we use "~" it will upgrade with every major upgrade. Hence it is safer to use caret coz in case 
+of major upgrade a lot of things can break in the application.
+
+package.json keeps the approx version of every dependency and package-lock.json keeps the track of the exact
+version of every dependency in the application.
+
+Node_modules contains data and source of all dependencies in the application. package.json is the configuration
+file while Node_modules is the database.
+
+Transitive dependency :- When one dependency has dependency on other packages.
+
+If we put package.json and package-lock.json we can create all of the node_modules so we don't need to put node_modules in github.
+
+npx is used to execute a package and npm is used to manage packages/dependencies.
+
+using react with cdn links needs a crossorigin import which is a costly and time consuming operation. so using react with npm is better
+coz we can use it from node_modules.
+
+import react from "react --- this react refers the react in node_modules".
+
+Functions of parcel :-
+1. Dev build.
+2. Creating a local server to host app.
+3. Perform HMR -- Hot Module replacement.
+4. Gives faster development experience using caching.
+5. Image Optimization.
+6. Minification and Bundling and Compress the files for production deployment.
+7. Content Hashing.
+8. Code splitting.
+9. Differential Bundling -- support older browsers.
+10. Diagnostic and gives better error suggestions.
+11. Way to host on https.
+12. Tree shaking -- remove unused code.
+13. Creates a different build for Dev and Production.
+
+Parcel uses a file changing algorithm built using c++
