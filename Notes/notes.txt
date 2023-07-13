@@ -50,3 +50,40 @@ Functions of parcel :-
 13. Creates a different build for Dev and Production.
 
 Parcel uses a file changing algorithm built using c++
+
+EPISODE 3 
+
+React.createElement returns a object and when the object is rendered it turns into an html element.
+
+JSX is not a part of react. You can create the whole react application without jsx.
+JSX is NOT html inside javascript. It is an html like syntax.
+
+JSX is not proper javascript. JS Engine only understands ECMAScript.
+
+JSX Code is transpiled before its rendered in browser using BABEL.
+BABEL is responsible for converting JSX to ECMAScript to make the browser/JS Engine understand JSX Code.
+JSX => React.createElement (Babel is used to do this) => React element object => render(element) to render it as html
+If we need to give attributes to JSX we need to use camelCase.
+JSX we need to wrap it in () if we use multiple lines.
+JSX takes care of cross-side scripting attacks.
+
+Everything in React is a component.
+Functional component is a function that returns a JSX Code or a react element.
+To create a component you have to Start it with caps to make babel understand that its a component.
+
+Component composition is just putting a component into another component.
+
+Different ways to call a component inside another component :-
+1. <Title/>
+2. <Title> </Title>
+3. {Title()} --- functional components are nothing but normal javascript functions
+
+JSX element must have only 1 parent. --- React.Fragment is used to put multiple div to get over this error.
+React.Fragement behaves like an empty tag.
+Use empty tags to use react Fragement
+
+React is designed to manage the rendering of the entire component tree from a single entry point. 
+If you need to render multiple components, you can do so within the component hierarchy of the root component, 
+rather than having multiple top-level ReactDOM.render() statements.
+
+Functional components are written using const because they represent an immutable object.
