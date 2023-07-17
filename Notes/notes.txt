@@ -87,3 +87,43 @@ If you need to render multiple components, you can do so within the component hi
 rather than having multiple top-level ReactDOM.render() statements.
 
 Functional components are written using const because they represent an immutable object.
+
+
+Config-driven UI :-
+Website being driven by data.
+
+Putting key in map is important to make sure react only renders the item that is changed.
+Never use index as keys.
+
+EPISODE 5:
+
+React Best practices :-
+1. Create folders for components,services,interfaces and keep react default code in src.
+2. Components name it with Caps;
+
+2 types of export and import :-
+
+1. Default export/import :- Can only be used once in a file. No need to use { } in import;
+2. Named export/import :- Used when we need to export multiple values from one file. 
+                        { } is used to destructure the name so react understands which value we want to import.
+
+
+React hooks are nothing but normal js functions. Its inbuilt with different utilities.
+- useState() -- used to create state variables. its called state coz it maintains the state of
+the component. useState returns an array. [a,setA] is array destructuring after usestate.
+
+whenever a state variable changes react will re-render the component. 
+Thats how state variable maintains the state of the component. 
+
+
+React uses reconciliation algorithm also known as react fiber.
+Virtual DOM is a representation of an actual DOM. Its a normal JS object which keeps track 
+of the actual DOM.
+Diff algorithm is used to find out the difference between 2 virtual DOMs old and new.
+Then the differences are rendered onto the actual DOM. 
+
+From react 16, finding out the 2 difference between 2 virtual dom objects is done using react fiber.
+instead of comparing 2 html we compare 2 js objects which makes react faster coz its easier to compare js objects than html.
+
+As soon as setList() is called, react will start reconciliation and update the actual dom.
+the set works as a trigger to start the diff algorithm.

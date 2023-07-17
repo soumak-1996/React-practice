@@ -1,0 +1,11 @@
+1. Header
+    - Logo
+    - Nav Items
+2. Body
+    - Search Bar
+    - Card Container
+        - Individual Card
+3. Footer
+    - CopyRight
+    - Links
+    - Address
