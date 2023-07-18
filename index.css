@@ -50,3 +50,20 @@
   .wrap {
     word-wrap: break-word;
   }
+  .shimmer-card {
+    width: 200px;
+    height: 400px;
+    background-color: #f0f0f0;
+    margin: 20px;
+  }
+  .shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .filter{
+    display: flex;
+    margin: 10px;
+  }
+  .top-rated {
+    padding-left: 10px;
+  }

@@ -127,3 +127,24 @@ instead of comparing 2 html we compare 2 js objects which makes react faster coz
 
 As soon as setList() is called, react will start reconciliation and update the actual dom.
 the set works as a trigger to start the diff algorithm.
+
+EPISODE 6 :-
+
+Monolith architecture :- All services are in the same application. API, UI and every service is in the same project.
+This leads to tight coupling and one minor change in one service requires build and deployment of all the services.
+
+Microservice architecture :- This follows seperation of concern and single responsibility principle.
+The different services interact with each other dependent on the use case.
+
+The reason react is popular is because of the re-render cycle efficiency.
+
+useEffect is called after the component is rendered not before the render cycle of the component.
+
+React re-renders the whole component and not just the individual element. rendering a component is nothing but calling the function again.
+
+when you re-render a component a new state variable is created and that is how we can update values of const variables. Its not the same
+variable that gets updated, but react creates a new variable with the same name and updated value.
+
+In the actual DOM only the elements that are changed are updated. but the whole component is re-rendered from react side.
+
+If we bind a state variable to input box unless we change the value of the input box it will not reflect in the input box.

@@ -2,7 +2,6 @@ import { IMAGE_URL } from "../utils/constants";
 
 const ResturantCard = (props) => {
     const {resData} = props;
-    //const {resturantdata} = props.data;
     const resturantdata = resData.data;
     return (
         <div className="res-card">
