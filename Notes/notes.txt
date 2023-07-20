@@ -148,3 +148,26 @@ variable that gets updated, but react creates a new variable with the same name 
 In the actual DOM only the elements that are changed are updated. but the whole component is re-rendered from react side.
 
 If we bind a state variable to input box unless we change the value of the input box it will not reflect in the input box.
+
+
+EPISODE 7 :
+
+if no dependency array is provided to useEffect => useEffect called on every render.
+if there is an empty dependency array [] => useEffect is only called on the initial render.
+if we provide something in dependency array => useEffect is only called when the dependency changes.
+
+Best practices regarding useState :- 
+1. Never create state variables outside the component and always create the state variables at the top of the component.
+2. Dont create state variables in any other scope other than component level i.e inside if else,for loop,functions.
+
+React-router-dom creates a default error page for invalid routes.
+
+Never use <a> tag to re-route to components because it refreshes the whole page. use link instead.
+
+# 2 types of routing in web apps :
+    - Server side routing :- using <a> or traditional tags to navigate where there is a network call
+    to fetch and the whole page is refreshed to render the new html.
+    - Client side routing :- there is no network call and the pages are not refreshed only the components
+    are interchanged. hence react creates single page application.
+
+Link tag is a wrapper over <a> tag.    
