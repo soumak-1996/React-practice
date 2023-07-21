@@ -170,4 +170,15 @@ Never use <a> tag to re-route to components because it refreshes the whole page.
     - Client side routing :- there is no network call and the pages are not refreshed only the components
     are interchanged. hence react creates single page application.
 
-Link tag is a wrapper over <a> tag.    
+Link tag is a wrapper over <a> tag.
+
+EPISODE 8:
+
+Constructor -> Render -> ComponentDidMount -> setState -> componentDidUpdate -> ComponentWillUnmount
+
+EPISODE 9 :
+
+single responsibility principle : Make your component as light as possible so that code is more 
+maintainable, portable and testable.
+
+Lazy loading is used to divide the app into smaller bundles which optimizes the app.
