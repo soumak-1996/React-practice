@@ -10,6 +10,7 @@ const RestaurantMenu = () => {
     if(resInfo === null || resInfo === undefined) return <Shimmer/>;
     const {name,cuisines,costForTwoMessage} = resInfo?.cards[0]?.card?.card?.info;
     const res = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR.cards.filter(p=> p.card.card.title === "Recommended");
+    console.log(res);
     const {itemCards} = res[0].card.card;
     return (
         <div className="container">
@@ -20,7 +21,7 @@ const RestaurantMenu = () => {
             </div>
             <div>
              {itemCards.map(info => (
-                <div key = {info?.card?.info?.id} className="p-2 m-4 w-lg bg-white shadow-lg justify-between flex hover:scale-95">
+                <div key = {info?.card?.info?.id} className="p-2 m-4 w-lg bg-white shadow-lg justify-between flex">
                     <div className="p-4">
                     <p className="font-sans">{info?.card?.info?.name}</p>
                     <p className="font-sans">Rs. {info?.card?.info?.price/100 || info?.card?.info?.defaultPrice /100}</p>
