@@ -1,22 +1,22 @@
 const Shimmer = () => {
     return (
-        <div className="shimmer-container">
-            <div className="shimmer-card"></div>
-            <div className="shimmer-card"></div>
-            <div className="shimmer-card"></div>
-            <div className="shimmer-card"></div>
-            <div className="shimmer-card"></div>
-            <div className="shimmer-card"></div>
-            <div className="shimmer-card"></div>
-            <div className="shimmer-card"></div>
-            <div className="shimmer-card"></div>
-            <div className="shimmer-card"></div>
-            <div className="shimmer-card"></div>
-            <div className="shimmer-card"></div>
-            <div className="shimmer-card"></div>
-            <div className="shimmer-card"></div>
-            <div className="shimmer-card"></div>
-            <div className="shimmer-card"></div>
+        <div className="flex flex-wrap">
+            <div className="p-2 m-4 w-[250px] h-40 bg-slate-300 rounded-lg"></div>
+            <div className="p-2 m-4 w-[250px] h-40 bg-slate-300 rounded-lg"></div>
+            <div className="p-2 m-4 w-[250px] h-40 bg-slate-300 rounded-lg"></div>
+            <div className="p-2 m-4 w-[250px] h-40 bg-slate-300 rounded-lg"></div>
+            <div className="p-2 m-4 w-[250px] h-40 bg-slate-300 rounded-lg"></div>
+            <div className="p-2 m-4 w-[250px] h-40 bg-slate-300 rounded-lg"></div>
+            <div className="p-2 m-4 w-[250px] h-40 bg-slate-300 rounded-lg"></div>
+            <div className="p-2 m-4 w-[250px] h-40 bg-slate-300 rounded-lg"></div>
+            <div className="p-2 m-4 w-[250px] h-40 bg-slate-300 rounded-lg"></div>
+            <div className="p-2 m-4 w-[250px] h-40 bg-slate-300 rounded-lg"></div>
+            <div className="p-2 m-4 w-[250px] h-40 bg-slate-300 rounded-lg"></div>
+            <div className="p-2 m-4 w-[250px] h-40 bg-slate-300 rounded-lg"></div>
+            <div className="p-2 m-4 w-[250px] h-40 bg-slate-300 rounded-lg"></div>
+            <div className="p-2 m-4 w-[250px] h-40 bg-slate-300 rounded-lg"></div>
+            <div className="p-2 m-4 w-[250px] h-40 bg-slate-300 rounded-lg"></div>
+            <div className="p-2 m-4 w-[250px] h-40 bg-slate-300 rounded-lg"></div>
         </div>
     )
 }

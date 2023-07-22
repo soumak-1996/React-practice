@@ -1,20 +1,21 @@
-import {LOGO_URL} from "../utils/constants";
 import { Link } from "react-router-dom";
-
+import logo from "../../logo.png";
 const Header = () => {
     return (
-        <div className="header">
-            <div className="logoContainer">
-                <img src={LOGO_URL} 
-                alt= "App logo" className="logo"/>
+        <div className="justify-between flex m-2 h-32">
+            <div className="logo-container">
+                <Link to="/">
+                    <img src={logo}
+                        alt= "App logo" className="w-28 rounded-lg pb-4 pl-4 hover:scale-125"/>
+                </Link>
             </div>
-            <div className="nav-items">
-                <ul>
-                    <li> <Link to="/"> Home</Link></li>
-                    <li> <Link to="/about">About Us</Link></li>
-                    <li> <Link to="/contact">Contact </Link></li>
-                    <li> <Link to="/grocery">Grocery </Link></li>
-                    <li> Cart</li>
+            <div className="flex items-center">
+                <ul className="flex p-4 m-4">
+                    <li className="px-2 text-gray-950 dark:text-white hover:scale-125"> <Link to="/" className="font-sans"> Home</Link></li>
+                    <li className="px-2 text-gray-950 dark:text-white hover:scale-125"> <Link to="/about">About Us</Link></li>
+                    <li className="px-2 text-gray-950 dark:text-white hover:scale-125"> <Link to="/contact">Contact </Link></li>
+                    <li className="px-2 text-gray-950 dark:text-white hover:scale-125"> <Link to="/grocery">Grocery </Link></li>
+                    <li className="px-2 text-gray-950 dark:text-white hover:scale-125"> Cart</li>
                 </ul>
             </div>   
         </div>

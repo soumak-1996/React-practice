@@ -182,3 +182,7 @@ single responsibility principle : Make your component as light as possible so th
 maintainable, portable and testable.
 
 Lazy loading is used to divide the app into smaller bundles which optimizes the app.
+
+EPISODE 10 :
+
+PostCSSRc helps parcel understand that we are using tailwind css.
