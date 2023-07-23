@@ -186,3 +186,18 @@ Lazy loading is used to divide the app into smaller bundles which optimizes the 
 EPISODE 10 :
 
 PostCSSRc helps parcel understand that we are using tailwind css.
+
+EPISODE 11 :
+
+Higher Order component is a component which takes a component as input and returns a component
+
+Higher Order component are used to enhance the component and they are pure functions which dont change the other component.
+
+Higher order component are used to enhance the other component. thats the major use of component.
+
+Controlled component is where the parent controls the state of the child component. 
+Uncontrolled component is not managed by parent.
+
+React context is used to store and access data which are used in multiple places.
+context helps us avoid props drilling. we can access and modify default values in context.
+We can create multiple context files for different things.

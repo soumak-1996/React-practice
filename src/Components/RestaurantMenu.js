@@ -3,35 +3,30 @@ import { useParams } from "react-router-dom";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
 import { IMAGE_URL } from "../utils/constants";
 import { useEffect, useState } from "react";
+import RestaurantCategory from "./RestaurantCategory";
 const RestaurantMenu = () => {
     const {resId} = useParams();
     const resInfo = useRestaurantMenu(resId);
+    const [showIndex,setShowIndex] = useState(0);
     if(resInfo === null || resInfo === undefined) return <Shimmer/>;
     const {name,cuisines,costForTwoMessage} = resInfo?.cards[0]?.card?.card?.info;
-    const res = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR.cards.filter(p=> p.card.card.title === "Recommended");
-    const {itemCards} = res[0].card.card;
+    const categories = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR.cards.filter
+    (c=> c.card?.["card"]?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
     return (
-        <div className="container">
-            <div className="pl-4">
+        <div className="container mt-4">
+            <div className="mx-auto w-8/12">
                 <p className="text-lg font-sans font-bold">{name}</p>
                 <p className="text-sm">{cuisines.join(",")}</p>
                 <h3>{costForTwoMessage}</h3>
             </div>
             <div>
-             {itemCards.map(info => (
-                <div key = {info?.card?.info?.id} className="p-2 m-4 w-lg bg-white shadow-lg justify-between flex">
-                    <div className="p-4">
-                    <p className="font-sans">{info?.card?.info?.name}</p>
-                    <p className="font-sans">Rs. {info?.card?.info?.price/100 || info?.card?.info?.defaultPrice /100}</p>
-                    <p className="font-light font-sans text-sm">{info?.card?.info?.description}</p>
-                    </div>
-                    <div className="p-4">
-                        <img className="w-[110px] rounded-lg" src={IMAGE_URL + info?.card?.info?.imageId}/>
-                        <button type="button" className="bg-white border border-solid border-blue-100 shadow-sm w-full rounded-lg text-green-400 font-sans text-lg">Add</button>
-                    </div>   
-                </div>
-                ))}
-            
+                {categories.map((category,index) => (<RestaurantCategory 
+                key={category?.card?.card.title} 
+                data={category?.card.card}
+                showItems= {index === showIndex ? true : false}
+                showThisIndex = {index}
+                setShowIndex = {(updatedIndex) => setShowIndex(updatedIndex)}
+                />))}
             </div>
         </div>
     )

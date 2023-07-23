@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import logo from "../../logo.png";
+import { useContext } from "react";
+import UserContext from "../utils/UserContext";
 const Header = () => {
+    const user = useContext(UserContext);
     return (
-        <div className="justify-between flex m-2 h-32">
+        <div className="justify-between flex  shadow-lg">
             <div className="logo-container">
                 <Link to="/">
                     <img src={logo}

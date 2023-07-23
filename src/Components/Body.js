@@ -1,4 +1,4 @@
-import ResturantCard from "./ResturantCard";
+import ResturantCard, { withPromoted } from "./ResturantCard";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
@@ -7,6 +7,7 @@ export const Body = () => {
     const [searchText,setsearchText] = useState("");
     const {listResturant,filteredResturant} = useRestaurantList();
     const [filteredList,setFilteredList] = useState([]);
+    const PromotedRestaurant = withPromoted(ResturantCard);
     useEffect(()=> {
         setFilteredList(filteredResturant);
     },[filteredResturant]);    
@@ -15,7 +16,7 @@ export const Body = () => {
         setFilteredList(filteredList);
     }
     return listResturant.length === 0 ? <Shimmer/> : (
-        <div className="container-lg">
+        <div className="w-11/12 m-auto mt-4">
             <div className="w-96 px-[23px]">
                 <div className="relative">
                     <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -34,7 +35,10 @@ export const Body = () => {
             </div>
             <div className="flex flex-wrap">
             {
-               filteredList.map(resturant => <Link  key = {resturant.data.id} className="cursor-pointer" to = {"/restaurants/" + resturant.data.id}><ResturantCard resData = {resturant}/></Link>)
+               filteredList.map(resturant => 
+               <Link  key = {resturant.data.id} className="cursor-pointer" to = {"/restaurants/" + resturant.data.id}>
+                {resturant.data.promoted ? <PromotedRestaurant resData={resturant}/> : <ResturantCard resData = {resturant}/>}</Link>
+               )
             }    
             </div>
         </div>
