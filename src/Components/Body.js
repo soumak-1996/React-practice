@@ -10,9 +10,6 @@ export const Body = () => {
     useEffect(()=> {
         setFilteredList(filteredResturant);
     },[filteredResturant]);    
-    const topRatedResturants = () => {
-        setFilteredList(listResturant.filter((res) => res.data.avgRating > 4.0));
-    }
     const searchResturant = () => {
         let filteredList = listResturant.filter((res) => res.data.name.toLowerCase().includes(searchText.toLowerCase()));
         setFilteredList(filteredList);

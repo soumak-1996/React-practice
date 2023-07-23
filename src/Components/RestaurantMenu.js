@@ -1,4 +1,3 @@
-
 import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
@@ -10,7 +9,6 @@ const RestaurantMenu = () => {
     if(resInfo === null || resInfo === undefined) return <Shimmer/>;
     const {name,cuisines,costForTwoMessage} = resInfo?.cards[0]?.card?.card?.info;
     const res = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR.cards.filter(p=> p.card.card.title === "Recommended");
-    console.log(res);
     const {itemCards} = res[0].card.card;
     return (
         <div className="container">
