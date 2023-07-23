@@ -27,6 +27,7 @@ const RestaurantMenu = () => {
                     </div>
                     <div className="p-4">
                         <img className="w-[110px] rounded-lg" src={IMAGE_URL + info?.card?.info?.imageId}/>
+                        <button type="button" className="bg-white border border-solid border-blue-100 shadow-sm w-full rounded-lg text-green-400 font-sans text-lg">Add</button>
                     </div>   
                 </div>
                 ))}
