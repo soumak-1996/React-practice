@@ -9,21 +9,23 @@ import Error from "./Components/Error";
 import RestaurantMenu from "./Components/RestaurantMenu";
 import useOnlineStatus from "./utils/useOnlineStatus";
 import Shimmer from "./Components/Shimmer";
+import { Provider } from "react-redux";
+import appStore from "./utils/appstore";
 //Chunking
 // Code Splitting
 // Dynamic Bundling
 // lazy loading
 const Grocery = lazy(() => import("./Components/Grocery") );
+
+const Cart = lazy(() => import("./Components/Cart"));
 const AppLayout = () => {
-    const online = useOnlineStatus();
-    if(online === false) return (
-        <h1>Uh oh! Looks like you are offline. Please check your internet connection.</h1>
-    )
     return (
-        <div className="app">
-            <Header/>
-            <Outlet/>
-        </div>
+        <Provider store={appStore}>
+            <div className="app">
+                <Header/>
+                <Outlet/>
+            </div>
+        </Provider>
     )
 }
 const approuter = createBrowserRouter([
@@ -50,6 +52,10 @@ const approuter = createBrowserRouter([
             {
                 path : "/grocery",
                 element : <Suspense fallback={<Shimmer/>}><Grocery/></Suspense>
+            },
+            {
+                path : "/cart",
+                element : <Suspense fallback={<Shimmer/>}><Cart/></Suspense>
             }
         ],
         errorElement: <Error/>

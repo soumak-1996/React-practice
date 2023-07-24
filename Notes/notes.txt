@@ -201,3 +201,37 @@ Uncontrolled component is not managed by parent.
 React context is used to store and access data which are used in multiple places.
 context helps us avoid props drilling. we can access and modify default values in context.
 We can create multiple context files for different things.
+
+EPISODE 12 :
+
+Redux is a state management library. Its NOT a part of react.
+
+Redux store is a big js object which is stored in a global place.
+Slice is used to seperate redux stores, so our main redux store doesnt get too bulky
+and slice is also used for data seperation between different logic.
+
+We cannot update a redux slice directly. When we need to modify data in a redux slice,
+we need to dispatch an action which in turn calls a function and this function modifies the slice.
+This function is called reducer function.
+
+Write data to slice : Dispatch an action -> Reducer function -> Updates the slice of the redux store.
+
+Read data from slice : We use a selector to read data from redux slice and this selector modifies the react component.
+This phenomenon is called subscribing to the store.
+If the component is subscribed to the slice , the data in the component will be automatically updated.
+
+- install redux-toolkit and react-redux
+- build redux store
+- connect the store to our app
+- create the slice
+- dispatch action to update slice
+- subscribe to slice to reflect updated slice data.
+
+useSelector -- subscribe to part of the store.
+
+useDispatch -- dispatch an action
+
+Provider --- store provider to app.
+
+Redux uses immer to find the difference between old and new state and returns a new copy of the mutated state and updates the existing state.
+

@@ -20,7 +20,7 @@ const RestaurantCategory = ({data , showItems, showThisIndex,setShowIndex}) => {
                     </svg>
                     </span>
                 </div>
-            {showItems && <ItemList className = "ease-in" categoryItems = {data.itemCards}/>}
+            {showItems && <ItemList className = "ease-in" categoryItems = {data.itemCards} fromMenu={true}/>}
             </div>
         </div>
     )
