@@ -28,8 +28,8 @@ const useRestaurantList = () => {
         const data = await fetch(RESTAURANT_API + lat + "&lng=" + long + "&" + DESKTOP_WEB_LISTING);
         const json = await data.json();
         // optional chaining
-        setlistResturant(json?.data?.cards[2]?.data?.data?.cards);
-        setfilteredResturant(json?.data?.cards[2]?.data?.data?.cards);
+        setlistResturant(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle.restaurants);
+        setfilteredResturant(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle.restaurants);
     }
     return {listResturant,filteredResturant};
 }

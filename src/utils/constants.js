@@ -5,3 +5,4 @@ export const MENU_API = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_M
 export const RESTAURANT_API = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=";
 export const DESKTOP_WEB_LISTING = "page_type=DESKTOP_WEB_LISTING";
 export const RES_ENDING = "&restaurantId="; 
+export const LOGO_PATH = "https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png";

@@ -6,7 +6,6 @@ import { useSelector } from "react-redux";
 const Header = () => {
     // subscribing to cart items using selector
     const cartItems = useSelector((store) => store.cart.items);
-    console.log(cartItems);
     return (
         <div className="justify-between flex  shadow-lg">
             <div className="logo-container">

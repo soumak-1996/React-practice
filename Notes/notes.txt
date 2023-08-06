@@ -235,3 +235,23 @@ Provider --- store provider to app.
 
 Redux uses immer to find the difference between old and new state and returns a new copy of the mutated state and updates the existing state.
 
+Types of testing as developer:-
+
+1. unit testing 
+2. integration testing
+3. E2E testing
+
+React testing library uses jest, it is built upon DOM testing library.
+
+Steps to make project test ready:-
+
+1. install react testing library.
+2.install jest
+3. add babel dependencies for jest.
+4. configure babel.config.js
+5. Configure parcel config file to disable default babel transpilation.
+6. Configure jest.
+7. Install JsDom library.
+8. Install  @babel/preset-react to make jsx work.
+9. add  @babel/preset-react to babel config.
+10. Install @testing-library/jest-dom
